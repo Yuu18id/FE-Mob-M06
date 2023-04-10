@@ -14,7 +14,7 @@ class Pertemuan06Screen extends StatefulWidget {
 class _Pertemuan06ScreenState extends State<Pertemuan06Screen> {
   
   String itemSelected = 'Pilih Pekerjaan';
-  String itemSelected1 = 'Pilih Pekerjaan';
+  String itemSelected1 = 'Cita-Cita';
   List items = [
     'Pilih Pekerjaan',
     'Mahasiswa',
@@ -28,8 +28,8 @@ class _Pertemuan06ScreenState extends State<Pertemuan06Screen> {
   ];
 
   List items1 = [
-    'Pilih Pekerjaan',
-    'Mahasiswa',
+    'Cita-Cita',
+    'Game Developer',
     'Dosen',
     'Programmer',
     'UI UX Designer',
@@ -70,6 +70,11 @@ class _Pertemuan06ScreenState extends State<Pertemuan06Screen> {
                 itemSelected1 = val as String;
               });
               }),
+              if (itemSelected1 == "Dosen")  Text('saya suka mengajar')
+              else if (itemSelected1 == "Game Developer")  Text('saya suka bermain game')
+              else if (itemSelected1 == "Programmer")  Text('saya suka ngoding')
+              else if (itemSelected1 == "UI UX Designer")  Text('saya suka mendesain')
+              else if (itemSelected1 == "IT Consultant")  Text('saya suka memberi arahan'),
         
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -90,18 +95,7 @@ class _Pertemuan06ScreenState extends State<Pertemuan06Screen> {
              })
           ],
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text('Latihan'),
-            Switch(
-              value: prov.latihan,
-            activeColor: Colors.green,
-             onChanged: (value) {
-              prov.latihan = value;
-             })
-          ],
-        ),
+          
       ],)
       ,),
     );
